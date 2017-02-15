@@ -22,3 +22,17 @@
     }
   }
 }
+
+/// Mixin to calculate Fontsize in 'rem'
+/// @author @top_webdesign
+/// @group Fonts
+/// @param {length} $size - Fontsize int with px
+/// @author mg
+/// @example
+///   @include font-size(14px)
+///   Output: font-size: 14px; //Will be overridden if browser supports rem
+///   font-size: 0.8rem;
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}

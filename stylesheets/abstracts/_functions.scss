@@ -40,3 +40,14 @@
 
   @return map-get($z-layers, $layer);
 }
+
+/// Function to calculate Fontsize in 'rem'
+/// @author @top_webdesign
+/// @group Fonts
+/// @require {variable} $font-size-root - Basic Root Font Size
+/// @param {int} $size - Fontsize as integer
+/// @return {int} returns calculated rem
+@function calculateRem($size) {
+  $remSize: $size / $font-size-root;
+  @return $remSize * 1rem;
+}
