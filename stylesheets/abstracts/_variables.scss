@@ -19,6 +19,50 @@ $font-stack-serif: 'Lucida Grande', Helvetica, Arial, sans-serif;
 
 
 
+/// Root font size
+/// @type length
+$font-size-root: 16px !default;
+
+/// Regular font size
+/// @type length
+$font-size-normal: 16px !default;
+
+/// Small font size
+/// @type length
+/// @require $font-size-normal
+$font-size-small: $font-size-normal / 1.2 !default;
+
+/// Regular line height
+/// @type length
+$line-height-normal: 1.5 !default;
+
+/// Basic Spacing
+/// @type length
+$spacing-normal: 1.5rem !default;
+
+/// Small Spacing
+/// @type length
+/// @require $spacing-normal
+$spacing-small: $spacing-normal / 2 !default;
+
+/// Large Spacing
+/// @type length
+/// @require $spacing-normal
+$spacing-large: $spacing-normal * 2 !default;
+
+
+
+
+
+/// z-index map
+/// @prop {String} keys - Keys are identifiers mapped to a given module
+/// @prop {Map} values - Values are actual z-index
+$z-layers: (
+  'notifications': 10
+);
+
+
+
 
 /// Color map
 /// @prop {String} keys - Keys are identifiers mapped to a given color name
@@ -73,16 +117,6 @@ $color-primary: $color-cd-orange;
 /// Color Highlight
 /// @group Colors
 $color-highlight: map-get($colors, color-definition__green);
-
-
-
-
-/// z-index map
-/// @prop {String} keys - Keys are identifiers mapped to a given module
-/// @prop {Map} values - Values are actual z-index
-$z-layers: (
-  'notifications': 10
-);
 
 
 
