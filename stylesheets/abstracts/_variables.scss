@@ -11,35 +11,68 @@ $debug-local: false !default;
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$font-stack-normal: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
-/// Code (monospace) font family
+/// Highlight font family
 /// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+$font-stack-serif: 'Lucida Grande', Helvetica, Arial, sans-serif;
 
 
 
 
-
-/// Copy text color
-/// @type Color
-$text-color: rgb(34, 34, 34) !default;
+/// Color map
+/// @prop {String} keys - Keys are identifiers mapped to a given name
+/// @prop {Map} values - Values are actual color hex code or rgb(a) function
+$colors: (
+  /// Color White
+  /// @group Colors
+  /// @type Color
+        'color-definition__white': #ffffff,
+  /// Color Black
+  /// @group Colors
+  /// @type Color
+        'color-definition__black': #000,
+  /// Color Orange
+  /// @group Colors
+  /// @type Color
+        'color-definition__orange': #ed6a12,
+  /// Color Green
+  /// @group Colors
+  /// @type Color
+        'color-definition__green': #00ae96,
+  /// Color Gray
+  /// @group Colors
+  /// @type Color
+        'color-definition__gray': #666
+) !default;
 
 /// Main brand color
 /// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+/// @group Colors
+$color-cd-orange: map-get($colors, color-definition__orange);
 
-/// Light grey
+/// Secondary brand color
 /// @type Color
-$light-grey: rgb(237, 237, 237) !default;
+/// @group Colors
+$color-cd-black: map-get($colors, color-definition__black);
 
-/// Medium grey
+/// Copy text color
 /// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
+/// @group Colors
+$color-text: $color-cd-black !default;
 
-/// Dark grey
+/// Site Background Color
 /// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
+/// @group Colors
+$color-background: map-get($colors, color-definition__white) !default;
+
+/// Color Primary
+/// @group Colors
+$color-primary: $color-cd-orange;
+
+/// Color Highlight
+/// @group Colors
+$color-highlight: map-get($colors, color-definition__green);
 
 
 
