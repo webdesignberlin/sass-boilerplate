@@ -28,3 +28,15 @@
 @function font($path, $base: $base-url) {
   @return asset($base, 'fonts/', $path);
 }
+
+/// Returns value of z-index
+/// @param {String} $layer - z-layer map
+/// @return {number | string}
+/// @require $z-layers
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($z-layers, $layer);
+}

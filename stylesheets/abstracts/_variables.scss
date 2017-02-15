@@ -21,29 +21,29 @@ $font-stack-serif: 'Lucida Grande', Helvetica, Arial, sans-serif;
 
 
 /// Color map
-/// @prop {String} keys - Keys are identifiers mapped to a given name
+/// @prop {String} keys - Keys are identifiers mapped to a given color name
 /// @prop {Map} values - Values are actual color hex code or rgb(a) function
 $colors: (
   /// Color White
   /// @group Colors
   /// @type Color
-        'color-definition__white': #ffffff,
+  'color-definition__white': #ffffff,
   /// Color Black
   /// @group Colors
   /// @type Color
-        'color-definition__black': #000,
+  'color-definition__black': #000,
   /// Color Orange
   /// @group Colors
   /// @type Color
-        'color-definition__orange': #ed6a12,
+  'color-definition__orange': #ed6a12,
   /// Color Green
   /// @group Colors
   /// @type Color
-        'color-definition__green': #00ae96,
+  'color-definition__green': #00ae96,
   /// Color Gray
   /// @group Colors
   /// @type Color
-        'color-definition__gray': #666
+  'color-definition__gray': #666
 ) !default;
 
 /// Main brand color
@@ -73,6 +73,16 @@ $color-primary: $color-cd-orange;
 /// Color Highlight
 /// @group Colors
 $color-highlight: map-get($colors, color-definition__green);
+
+
+
+
+/// z-index map
+/// @prop {String} keys - Keys are identifiers mapped to a given module
+/// @prop {Map} values - Values are actual z-index
+$z-layers: (
+  'notifications': 10
+);
 
 
 
