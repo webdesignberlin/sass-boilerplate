@@ -1,0 +1,119 @@
+###
+# + Project related
+# ==================================================================
+
+# processed assets
+**/*.map
+
+# sassdoc
+sassdoc/
+
+###
+# + IDEs / DevEnv
+# ==================================================================
+
+# JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+/*.iml
+.idea/
+.idea_modules/
+*.ipr
+*.iws
+
+# eclipse pdt
+.project
+
+# Dreamweaver
+_notes
+dwsync.xml
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+.sublime-grunt.cache
+sftp-config.json
+
+# Jenkins, Vagrant
+build/*
+.vagrant/
+
+# Node, Bower, Sass, test
+node_modules/
+npm-debug.log
+bower_components/
+.sass-cache/
+coverage/
+
+# = IDEs / DevEnv
+
+
+
+###
+# + Operating systems
+# ==================================================================
+
+# Linux
+*~
+.directory
+.ssh/
+
+# Windows
+thumbs.db
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+.AppleDB
+.AppleDesktop
+
+# = Operating systems
+
+
+
+###
+# + Other
+# ==================================================================
+
+*.tmp
+*.bak
+*.swp
+*.map
+public/components
+public/js/main.js
+public/js/main-*
+public/js/slider.js
+public/css/style.css
+public/css/main.css
+public/css/main-*
+public/images/*
+public/rev-manifest.json
+!public/images/src
+public/js/nunjucks/precompiled.js
+
+/.env
+/.docker/**/.env
+
+# = Other
+
+
+
+###
+# + Do not ignore
+# ==================================================================
+
+!.gitignore
+!.gitkeep
+
+# = Do not ignore
