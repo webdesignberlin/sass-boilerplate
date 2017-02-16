@@ -27,7 +27,6 @@
 /// @author @top_webdesign
 /// @group Fonts
 /// @param {length} $size - Fontsize int with px
-/// @author mg
 /// @example
 ///   @include font-size(14px)
 ///   Output: font-size: 14px; //Will be overridden if browser supports rem
@@ -35,4 +34,29 @@
 @mixin font-size($size) {
   font-size: $size;
   font-size: calculateRem($size);
+}
+
+/// Mixin to add font weight
+/// @author @top_webdesign
+/// @group Fonts
+/// @param {string} $weight - weight as String
+/// @example
+///   @include font-weight('thin')
+///   Output: font-weight: 100;
+@mixin font-weight($weight) {
+  @if $weight == 'thin' {
+    font-weight: 100;
+  }
+  @if $weight == 'normal' {
+    font-weight: 300;
+  }
+  @if $weight == 'medium' {
+    font-weight: 500;
+  }
+  @if $weight == 'bold' {
+    font-weight: 700;
+  }
+  @if $weight == 'black' {
+    font-weight: 900;
+  }
 }
